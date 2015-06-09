@@ -1,0 +1,54 @@
+/* Prevent ugly text selection */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+body {
+	font-family: Open Sans;
+}
+
+/*#stripe-2, #stripe-3 {
+  display: none;
+}*/
+
+#data_table {
+  border: 1px solid #bbb;
+}
+
+#stripe-1 {
+  background-image: url("../../img/bg.jpg");
+  background-size: 100% auto;
+}
+
+#stripe-2 {
+  background: #FFF;
+  padding-top: 0;
+}
+
+#stripe-3 {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+
+.white {
+  color: #ddd;
+  text-shadow: 2px 2px 3px #999;
+}
+
+.google-visualization-table-td-number {
+  text-align: left;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+#data_table {
+  box-shadow: 2px 2px 5px #888888;
+}

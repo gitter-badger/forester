@@ -1,0 +1,45 @@
+  <div id="wrapper">
+    <div id="leftpane">
+
+      <span>Select Country:
+        <select id="country-select">
+          <option value="FIN">FIN</option>
+          <option value="HUN">HUN</option>
+          <option value="MDG">MDG</option>
+          <option value="VNM">VNM</option>
+          <option value="BRA">BRA</option>
+        </select>
+      </span>
+
+      <hr/>
+
+      <span>Data status:
+        <span id="data_status">no data</span>
+      </span>
+      <button id="btn_get_data">Get data</button>
+
+      <hr/>
+
+      <div>
+        <br/><br/>
+        <table id="data_table" class="sortable">
+          <thead class="noselect">
+            <tr>
+              <td>Date</td>
+              <td>Value</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+
+        </table>
+      </div>
+
+      <hr/>
+
+      <div>
+        <br/><br/>
+        <div id="data_chart"></div>
+      </div>
+
+    </div>
+  </div>

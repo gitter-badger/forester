@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prettified</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- External Files -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>google.load("visualization", "1", {packages:["table", "corechart"]});</script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Project Files -->
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/script.js"></script>
+  <script src="js/sorttable.js"></script>
+
+</head>
+
+<body>
+  <!-- Bootstrap -->
+
+  <div id="stripe-1" class="jumbotron">
+    <div class="container">
+
+      <h2 class="white">Forest Area by Country</h2>
+      <hr/>
+      <span><span class="white">Select Country:</span>
+        <select id="country-select">
+          <option value="FIN">Finland</option>
+          <option value="HUN">Hungary</option>
+          <option value="MDG">Madagascar</option>
+          <option value="VNM">Vietnam</option>
+          <option value="BRA">Brasil</option>
+        </select>
+        <button id="btn_get_data">Get data</button>
+        <span id="data_status" class="white"></span>
+      </span>
+      <br/>
+      <br/>
+
+    </div>
+  </div>
+  <div id="stripe-2" class="jumbotron">
+    <div class="container">
+
+      <div id="table-container">
+        <h2 id="table-header">Data Table</h2>
+        <span>Click on attribute headers to sort</span>
+        <br/>
+        <br/>
+        <div>
+          <table id="data_table" class="table table-striped sortable">
+            <thead class="noselect">
+              <tr>
+                <td>Date</td>
+                <td>Forest area (% of land area)</td>
+              </tr>
+            </thead>
+            <col width="70">
+            <col width="70">
+            <tbody></tbody>
+          </table>
+        </div>
+        <br/>
+        <br/>
+      </div>
+
+    </div>
+  </div>
+  <div id="stripe-3" class="jumbotron">
+    <div class="container">
+      <h2>Google Table + Chart</h2>
+      <span>Rounded by request</span>
+      <br/>
+      <br/>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="chart-container">
+            <div>
+              <div id="data_chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="chart_div"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
