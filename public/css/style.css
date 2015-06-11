@@ -9,13 +9,13 @@
     cursor: pointer;
 }
 
-body {
-	font-family: Open Sans;
+html {
+  overflow-y: scroll;
 }
 
-/*#stripe-2, #stripe-3 {
-  display: none;
-}*/
+body {
+  font-family: Open Sans;
+}
 
 #data_table {
   border: 1px solid #bbb;
@@ -37,16 +37,12 @@ body {
 }
 
 .white {
-  color: #ddd;
-  text-shadow: 2px 2px 3px #999;
+  color: #eee;
+  text-shadow: 1px 1px 5px #000;
 }
 
 .google-visualization-table-td-number {
   text-align: left;
-}
-
-html {
-  overflow-y: scroll;
 }
 
 #data_table {

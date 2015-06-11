@@ -49,28 +49,12 @@ $(function() {
 		// Draw Google Charts
 		function drawGoogleChart() {
 
-      // Create the data table.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Slices');
-      data.addRows([
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2]
-      ]);
-
-      // Set chart height and options
-      var tableHeight = $('.google-visualization-table-table').height();
-      console.log(tableHeight);
-      console.log($('#stripe-1').height());
-
       var options = {
-      	'title': 'Forest Area',
-      	'backgroundColor': { fill:'transparent' },
-        'width': 400,
-        'height': 500,
+      	title: 'Forest Area',
+      	backgroundColor: { fill:'transparent' },
+        width: 400,
+        height: 500,
+        colors: ['#00CC00'],
         legend: {
         	position: 'none'
         }
@@ -81,9 +65,6 @@ $(function() {
       chart.draw(gData, options);
     }
     drawGoogleChart();
-
-		//google.setOnLoadCallback(drawGoogleTable);
-		/*for Google Charts Table see: https://developers.google.com/chart/interactive/docs/gallery/table*/
 	}
 
 	function get_data(){
@@ -91,15 +72,15 @@ $(function() {
 		$("#data_status").html("Fetching data...");
 		country = $('#country-select').val();
 
-		// where to retrieve the data from
+		// Where to retrieve the data from
 		var url = "http://api.worldbank.org/countries/"+country+"/indicators/"+what_data+"?per_page="+rows_per_page+"&date="+year_from+":"+year_to+"&format=jsonP";
 		$.ajax({
 		  url: url,
-		  type:"GET", // interview question: what are other type of requests?
-		  dataType:"jsonp", // JSON with padding
+		  type: "GET",
+		  dataType: "jsonp", 
 		  jsonp: "prefix",
 		  jsonpCallback: "display_data",
-		  cache: false, // interview question: what's the role of cache:false here? is that necessary here? if not, why? if yes, why?
+		  cache: false,
 		  
 		  success: function(data, status, jqXHR) {
 
@@ -107,8 +88,6 @@ $(function() {
 
 		  	// Display the table container
 		  	display_data(data);
-		  	/*$('#stripe-2').css("display", "visible");
-		  	$('#stripe-3').css("display", "visible");*/
 		  	$('#stripe-2').show();
 		  	$('#stripe-3').show();
 
